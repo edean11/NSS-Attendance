@@ -1,6 +1,7 @@
 - if @user_attendance.empty?
+  = @user_attendance
   %p There isn't any recorded attendance yet.  You should record yours!
 - else
-  - sorted_by_attendance = (params[:sort] == "present")
+  %h1 Attendance Leaderboard
 = link_to "Record Attendance", new_attendance_path
 = link_to "Record Future Absence", new_absence_path

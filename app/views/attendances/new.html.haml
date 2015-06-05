@@ -1,0 +1,5 @@
+%h1 Attendance
+%select#student
+    - @users.each do |user|
+        %option #{user.name}
+= link_to "Present", attendance_path, method: :post
